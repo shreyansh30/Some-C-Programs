@@ -1,19 +1,13 @@
 #include <stdio.h>
-
 int main()
 {
-    int a,b,c;
-    printf("Enter first integer : ");
-    scanf("%d",&a);
-
-    printf("Enter second integer : ");
-    scanf("%d",&b);
-
-    c = a;
-    a = b;
-    b = c;
-
-    printf("Swapping done!\n");
-    printf("Value of a is : %d\n",a);
-    printf("Value of b is : %d\n",b);
+    int x,y;
+    printf("Enter a number : ");
+    scanf("%d",&x);
+    
+    printf("Enter another number : ");
+    scanf("%d",&y);
+    
+    (x ^= y), (y ^= x), (x ^= y);
+    printf("After Swapping values of x and y are %d %d", x,y);
 }
