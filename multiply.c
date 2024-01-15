@@ -1,25 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
-    int i,n,m=1;
-    int a[10];
-    
-    printf("Enter array size : ");
-    scanf("%d",&n);
+    int n1,n2;
+    int mul;
 
-    printf("Enter array elements : ");
+    printf("Enter the first number : ");
+    scanf("%d",&n1);
 
-    for (i = 0; i < n; i++)
-    {
-        scanf("%d",&a[i]);
-    }
-    
-    for (i = 0; i < n; i++)
-    {
-        m=m*a[i];
-    }
+    printf("Enter the second number : ");
+    scanf("%d",&n2);
 
-    printf("Product of the array elements = %d",m);
-    
+    int *pn1 = &n1;
+    int *pn2 = &n2;
+
+    mul = (*pn1)*(*pn2);
+    printf("Multiple of those numbers = %d",mul);
+
 }

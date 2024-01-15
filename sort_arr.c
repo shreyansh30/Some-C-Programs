@@ -3,7 +3,7 @@
 
 int main()
 {
-    int i,n,sum = 0,*ptr;
+    int i,n,*ptr,min;
 
     printf("Enter the size of array : ");
     scanf("%d",&n);
@@ -15,10 +15,15 @@ int main()
         scanf("%d",ptr + i);  
     }
 
-    for (i = 0; i < n; i++)
-    {
-        sum = sum + *(ptr + i);  
-    }
+    min = *ptr;
 
-    printf("%d",sum); 
+    for ( i = 1; i < n; i++)
+    {
+        if (min > *(ptr + i))
+        {
+            min = *(ptr + i);
+        }    
+    }
+    
+    
 }
